@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>普通两列布局</title>
+    <!--清楚默认样式-->
+    <link rel="stylesheet" href="../../../normalize/normalize.css" />
+    <style>
+      /* body {
+        margin: 0px;
+        padding: 0px;
+      } */
+      .parent {
+        /*清除浮动*/
+        position: absolute;
+        background: yellow;
+        width: 100%;
+        height: 100%;
+      }
+      .parent .child-left {
+        float: left;
+        width: 100px;
+        height: 100%;
+        background: lightcyan;
+      }
+      .parent .child-right {
+        background: lightgoldenrodyellow;
+        height: 100%;
+        /*使用BFC消除文字环绕*/
+        overflow: hidden;
+        /*使用margin或padding消除文字环绕*/
+        /*padding-left: 100px;*/
+        /*margin-left: 100px;*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="child-left">left</div>
+      <div class="child-right">right</div>
+    </div>
+  </body>
+</html>
